@@ -1,38 +1,73 @@
-# New Repo Project
+# Test Frameworks Playground
 
-The new-repo project is a default template for .NET Foundation projects. It's also probably a fine start for other .NET projects (have at it, but change the license). It contains the correct license, a decent README, and initial project structure (including a standard .gitignore for the Visual Studio family of products).
+A centralized repository showcasing test projects for popular .NET testing frameworks. This repository serves as a testing ground for validating Test Explorer functionality and testing platform implementations.
 
-You can learn more about the project from the project [Documentation](Documentation).
+## Purpose
 
-## Using New Repo
+This repository helps with:
 
-You can simply `git clone` this project to get started. It is recommended that you don't preserve history of the project (it isn't generally meaningful) for your repo, but make a copy and `git init` your project from source.
+- **Manual Testing**: Verify that Test Explorer correctly discovers, displays, and runs tests
+- **Test Execution**: Validate tests can be executed individually or in batches
+- **Platform Validation**: Test changes to Microsoft Testing Platform (MTP) and `dotnet test`
+- **Framework Compatibility**: Ensure different test frameworks work correctly with various test runners
 
-Consult [CHECKLIST.md](CHECKLIST.md) for helpful suggestions on preparing your repo to go public.
+## Test Projects
+
+The repository includes test projects for the following frameworks:
+
+### [MSTest](https://github.com/microsoft/testfx)
+
+- `MSTest.MTP` - MSTest with Microsoft Testing Platform
+- `MSTest.VSTest` - MSTest with VSTest platform
+
+### [NUnit](https://nunit.org/)
+
+- `NUnit.MTP` - NUnit with Microsoft Testing Platform
+- `NUnit.VSTest` - NUnit with VSTest platform
+
+### [xUnit.net](https://xunit.net/)
+
+- `XUnit.MTPv1` - XUnit with Microsoft Testing Platform v1
+- `XUnit.MTPv2` - XUnit with Microsoft Testing Platform v2
+
+### [TUnit](https://github.com/thomhurst/TUnit)
+
+- `TUnit.MTP` - TUnit with Microsoft Testing Platform
 
 ## Building
 
-You don't "build" New Repo, however, this will be meaningful for many other projects.
+To build all test projects:
+
+```bash
+dotnet build TestFrameworksPlayground.slnx
+```
+
+To build a specific project:
+
+```bash
+dotnet build src/<ProjectName>/<ProjectName>.csproj
+```
+
+## Running Tests
+
+Run all tests:
+
+```bash
+dotnet test TestFrameworksPlayground.slnx
+```
+
+Run tests for a specific project:
+
+```bash
+dotnet test src/<ProjectName>/<ProjectName>.csproj
+```
 
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for information on contributing to this project.
 
-This project has adopted the code of conduct defined by the [Contributor Covenant](http://contributor-covenant.org/) 
-to clarify expected behavior in our community. For more information, see the [.NET Foundation Code of Conduct](http://www.dotnetfoundation.org/code-of-conduct).
+This project has adopted the code of conduct defined by the [Contributor Covenant](http://contributor-covenant.org/) to clarify expected behavior in our community. For more information, see the [.NET Foundation Code of Conduct](http://www.dotnetfoundation.org/code-of-conduct).
 
 ## License
 
 This project is licensed with the [MIT license](LICENSE).
-
-## .NET Foundation
-
-New Repo is a [.NET Foundation project](https://dotnetfoundation.org/projects).
-
-## Related Projects
-
-You should take a look at these related projects:
-
-- [.NET Core](https://github.com/dotnet/core)
-- [ASP.NET](https://github.com/aspnet)
-- [Mono](https://github.com/mono)
