@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="src/MSTest.MTP/MSTest.MTP.csproj" />
+  <Project Path="src/MSTest.VSTest/MSTest.VSTest.csproj" />
+  <Project Path="src/NUnit.MTP/NUnit.MTP.csproj" />
+  <Project Path="src/NUnit.VSTest/NUnit.VSTest.csproj" />
+  <Project Path="src/TUnit.MTP/TUnit.MTP.csproj" />
+  <Project Path="src/XUnit.MTPv1/XUnit.MTPv1.csproj" />
+  <Project Path="src/XUnit.MTPv2/XUnit.MTPv2.csproj" />
+</Solution>
